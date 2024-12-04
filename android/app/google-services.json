@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "824876292521",
+    "project_id": "tugas-besar-pabp",
+    "storage_bucket": "tugas-besar-pabp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:824876292521:android:3877706d3c2793d23d0cb8",
+        "android_client_info": {
+          "package_name": "com.example.tugas_besar_pabp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "824876292521-acskpq0hnc34871slifbf515p5l54pri.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXIpGStZwoKVHmkrfOlLUIJB5W8pt0I0M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "824876292521-acskpq0hnc34871slifbf515p5l54pri.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
