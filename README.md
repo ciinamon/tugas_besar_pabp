@@ -1,6 +1,5 @@
 <div align=center>
 <a href="https://nostracode.com">
-<img src="assets/images/nostra_logo.png">
 </a>
 </div>
 

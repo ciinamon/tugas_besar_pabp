@@ -16,8 +16,8 @@ class VocabsDelta extends StatelessWidget {
     return OnReactive(
       () {
         return SizedBox(
-          width: 100,
-          height: 100,
+          width: 80,
+          height: 80,
           child: Image.asset(
             _dt.rxIsCorrect.st == null
                 ? pathNull

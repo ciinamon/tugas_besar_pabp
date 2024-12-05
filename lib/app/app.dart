@@ -6,7 +6,7 @@ class App extends TopStatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      title: 'NC Flutter Template',
+      title: 'Tugas Besar PABP',
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(),
       routeInformationParser: nav.routeInformationParser,

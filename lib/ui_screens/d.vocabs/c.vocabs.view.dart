@@ -18,14 +18,15 @@ class VocabsView extends StatelessWidget {
           if (_ct.needPremiumAccount()) {
             return const VocabsGolf();
           }
-          return ListView(
-            children: const [
-              SizedBoxH(50),
+          return const Column(
+            children: [
+              Spacer(),
               VocabsDelta(),
-              SizedBoxH(50),
+              Spacer(),
               VocabsCharlie(),
-              SizedBoxH(50),
+              Spacer(),
               VocabsEcho(),
+              Spacer(),
             ],
           );
         },
