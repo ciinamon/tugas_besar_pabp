@@ -8,6 +8,5 @@ class Routes {
   static const home = '/';
   static const auth = '/auth';
   static const users = '/users';
-  static const words = '/words';
   static const vocabs = '/vocabs';
 }

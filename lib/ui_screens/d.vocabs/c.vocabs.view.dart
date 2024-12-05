@@ -18,10 +18,8 @@ class VocabsView extends StatelessWidget {
           if (_ct.needPremiumAccount()) {
             return const VocabsGolf();
           }
-          final datax = [...data];
-          datax.shuffle();
-          return const Column(
-            children: [
+          return ListView(
+            children: const [
               SizedBoxH(50),
               VocabsDelta(),
               SizedBoxH(50),
