@@ -6,12 +6,14 @@ class Userx {
   String createdAt;
   bool isPremium;
   String role;
+  int currentNo;
   Userx({
     this.uid = '',
     this.email = '',
     this.createdAt = '',
     this.isPremium = false,
     this.role = '',
+    this.currentNo = 1,
   });
 
   Userx copyWith({
@@ -20,6 +22,7 @@ class Userx {
     String? createdAt,
     bool? isPremium,
     String? role,
+    int? currentNo,
   }) {
     return Userx(
       uid: uid ?? this.uid,
@@ -27,6 +30,7 @@ class Userx {
       createdAt: createdAt ?? this.createdAt,
       isPremium: isPremium ?? this.isPremium,
       role: role ?? this.role,
+      currentNo: currentNo ?? this.currentNo,
     );
   }
 
@@ -38,6 +42,7 @@ class Userx {
     result.addAll({'created_at': createdAt});
     result.addAll({'is_premium': isPremium});
     result.addAll({'role': role});
+    result.addAll({'current_no': currentNo});
 
     return result;
   }
@@ -49,6 +54,7 @@ class Userx {
       createdAt: map['created_at'] ?? '',
       isPremium: map['is_premium'] ?? false,
       role: map['role'] ?? '',
+      currentNo: map['current_no']?.toInt() ?? 0,
     );
   }
 
@@ -58,7 +64,7 @@ class Userx {
 
   @override
   String toString() {
-    return 'Userx(uid: $uid, email: $email, createdAt: $createdAt, isPremium: $isPremium, role: $role)';
+    return 'Userx(uid: $uid, email: $email, createdAt: $createdAt, isPremium: $isPremium, role: $role, currentNo: $currentNo)';
   }
 
   @override
@@ -70,11 +76,12 @@ class Userx {
         other.email == email &&
         other.createdAt == createdAt &&
         other.isPremium == isPremium &&
-        other.role == role;
+        other.role == role &&
+        other.currentNo == currentNo;
   }
 
   @override
   int get hashCode {
-    return uid.hashCode ^ email.hashCode ^ createdAt.hashCode ^ isPremium.hashCode ^ role.hashCode;
+    return uid.hashCode ^ email.hashCode ^ createdAt.hashCode ^ isPremium.hashCode ^ role.hashCode ^ currentNo.hashCode;
   }
 }

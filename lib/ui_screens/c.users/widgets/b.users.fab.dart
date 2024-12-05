@@ -7,10 +7,7 @@ class UsersFab extends StatelessWidget {
   Widget build(BuildContext context) {
     return FloatingActionButton(
       child: const Icon(Icons.add),
-      onPressed: () {
-        _ct.increaseCounter();
-        _ct.updateRandom();
-      },
+      onPressed: () {},
     );
   }
 }

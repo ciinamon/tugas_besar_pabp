@@ -7,10 +7,18 @@ class App extends TopStatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       title: 'NC Flutter Template',
-      debugShowCheckedModeBanner: true,
+      debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(),
       routeInformationParser: nav.routeInformationParser,
       routerDelegate: nav.routerDelegate,
+      scrollBehavior: const MaterialScrollBehavior().copyWith(
+        dragDevices: {
+          PointerDeviceKind.mouse,
+          PointerDeviceKind.touch,
+          PointerDeviceKind.stylus,
+          PointerDeviceKind.unknown
+        },
+      ),
     );
   }
 }

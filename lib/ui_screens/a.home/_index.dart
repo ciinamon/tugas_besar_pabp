@@ -2,6 +2,9 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:states_rebuilder/states_rebuilder.dart';
+import 'package:tugas_besar_pabp/ui_screens/b.auth/_index.dart';
+import 'package:tugas_besar_pabp/ui_screens/c.users/_index.dart';
+import 'package:tugas_besar_pabp/ui_screens/d.vocabs/_index.dart';
 
 import '../../app/_index.dart';
 import '../../xtras/_index.dart';

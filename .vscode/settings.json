@@ -5,13 +5,10 @@
     ".flutter-plugins": true,
     ".flutter-plugins-dependencies": true,
     ".git": true,
-    ".gitignore": true,
-    ".idea": true,
     ".metadata": true,
     ".readme_template": true,
     ".vscode": true,
     "analysis_options.yaml": true,
-    "android": true,
     "firebase.json": true,
     "firestore.indexes.json": true,
     "firestore.rules": true,
@@ -19,9 +16,7 @@
     "linux": true,
     "macos": true,
     "pubspec.lock": true,
-    "README.md": true,
     "test": true,
-    "tugas_besar_pabp.iml": true,
     "windows": true
   }
 }

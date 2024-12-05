@@ -5,39 +5,27 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: const PreferredSize(
-        preferredSize: Size.fromHeight(56),
-        child: HomeAppbar(),
-      ),
-      // floatingActionButton: HomeFab(),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            // HomeCharlie(),
-            // HomeDelta(),
-            // HomeEcho(),
-            ElevatedButton(
-              onPressed: () => nav.to(Routes.sampleSatu),
-              child: const Text(
-                "to sample_satu",
-              ),
-            ),
-            ElevatedButton(
-              onPressed: () => nav.to(Routes.sampleDua),
-              child: const Text(
-                "to sample_dua",
-              ),
-            ),
-            ElevatedButton(
-              onPressed: () => nav.to(Routes.sampleTiga),
-              child: const Text(
-                "to sample_tiga",
-              ),
-            ),
-          ],
+    return Material(
+      child: OnBuilder.all(
+        listenTo: Prov.auth.st.rxSignedInUserx,
+        onError: (error, refreshError) => Center(child: Text(error.toString())),
+        onWaiting: () => const Center(
+          child: Text(
+            'loading your credentials...',
+            textScaler: TextScaler.linear(1.3),
+          ),
         ),
+        onData: (data) {
+          if (data != null) {
+            switch (data.role) {
+              case 'admin':
+                return const UsersView();
+              case 'client':
+                return const VocabsView();
+            }
+          }
+          return const AuthView();
+        },
       ),
     );
   }

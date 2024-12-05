@@ -7,6 +7,13 @@ class UsersAppbar extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppBar(
       title: OnReactive(() => Text(_dt.rxTitle.st)),
+      actions: [
+        IconButton(
+          onPressed: () => nav.toBottomSheet(const BottomSheetX()),
+          icon: const Icon(Icons.more_vert),
+        ),
+        const SizedBoxW(5),
+      ],
     );
   }
 }

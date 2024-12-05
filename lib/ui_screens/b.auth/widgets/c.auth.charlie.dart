@@ -11,16 +11,6 @@ class AuthCharlie extends StatelessWidget {
           onPressed: () => _ct.signIn(),
           child: const Text("Google Sign in"),
         ),
-        const SizedBox(height: 20),
-        ElevatedButton(
-          onPressed: () => _ct.signOut(),
-          child: const Text("Sign out"),
-        ),
-        const SizedBox(height: 20),
-        ElevatedButton(
-          onPressed: () => _ct.delete(),
-          child: const Text("Delete"),
-        ),
       ],
     );
   }

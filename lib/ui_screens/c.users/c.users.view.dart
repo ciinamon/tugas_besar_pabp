@@ -10,16 +10,9 @@ class UsersView extends StatelessWidget {
         preferredSize: Size.fromHeight(56),
         child: UsersAppbar(),
       ),
-      floatingActionButton: UsersFab(),
+      // floatingActionButton: UsersFab(),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            UsersCharlie(),
-            UsersDelta(),
-            UsersEcho(),
-          ],
-        ),
+        child: UsersCharlie(),
       ),
     );
   }

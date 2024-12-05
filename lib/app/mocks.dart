@@ -7,7 +7,8 @@ class Mocks {
 
   Future<void> init() async {
     Repo.auth.injectMock(() => AuthRepoMock());
-    Repo.users.injectMock(() => UsersRepoMock());
+    Repo.userx.injectMock(() => UserxRepoMock());
+    Repo.vocab.injectMock(() => VocabRepoMock());
     injectMocks();
   }
 
