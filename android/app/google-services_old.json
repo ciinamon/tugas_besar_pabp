@@ -14,14 +14,6 @@
       },
       "oauth_client": [
         {
-          "client_id": "824876292521-b2g8ol00l89lbbecrkoo5ur7o6s8otpc.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.tugas_besar_pabp",
-            "certificate_hash": "9daf9a56af43771e8dbc00a2ff348c844bc1187a"
-          }
-        },
-        {
           "client_id": "824876292521-acskpq0hnc34871slifbf515p5l54pri.apps.googleusercontent.com",
           "client_type": 3
         }
