@@ -22,13 +22,15 @@ class AuthServ {
   Future<void> signIn() async {
     logzz.i(AuthServ, 'signIn()');
     // ----- ----- -----
-    final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
-    final GoogleSignInAuthentication? googleAuth = await googleUser?.authentication;
-    final credential = GoogleAuthProvider.credential(
-      accessToken: googleAuth?.accessToken,
-      idToken: googleAuth?.idToken,
-    );
-    await FirebaseAuth.instance.signInWithCredential(credential);
+    await FirebaseAuth.instance.signInWithPopup(GoogleAuthProvider());
+    // await FirebaseAuth.instance.signInWithRedirect(GoogleAuthProvider());
+    // final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
+    // final GoogleSignInAuthentication? googleAuth = await googleUser?.authentication;
+    // final credential = GoogleAuthProvider.credential(
+    //   accessToken: googleAuth?.accessToken,
+    //   idToken: googleAuth?.idToken,
+    // );
+    // await FirebaseAuth.instance.signInWithCredential(credential);
   }
 
   Future<void> signOut() async {
